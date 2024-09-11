@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mito da Caverna - Beta</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Mito da Caverna - As 10 Sombras</h1>
+        <nav>
+            <button onclick="window.location.href='funcionamento.html'">Funcionamento</button>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Encontre a verdade por trás das sombras</h2>
+        <div id="sombra" onclick="mostrarOpcoes()">
+            <img src="https://i.imgur.com/ht8opse.png" alt="Sombra do animal">
+        </div>
+        <div id="opcoes" class="escondido">
+            <button onclick="nomeErrado()">Dizer que é um Cavalo</button>
+            <button onclick="iniciarPerguntas()">Perguntas e Respostas</button>
+        </div>
+
+        <div id="quiz" class="escondido">
+            <p id="pergunta"></p>
+            <button onclick="responder(1)">Opção 1</button>
+            <button onclick="responder(2)">Opção 2</button>
+            <button onclick="responder(3)">Opção 3</button>
+            <button onclick="responder(4)">Opção 4</button>
+            <p id="vidas">Vidas restantes: 3</p>
+        </div>
+
+        <div id="cacaPalavras" class="escondido">
+            <h3>Caça Palavras:</h3>
+            <input type="text" id="palavraInput" maxlength="5">
+            <button onclick="verificarPalavra()">Enviar</button>
+            <p id="resultado"></p>
+        </div>
+    </main>
+
+</body>
+</html>
